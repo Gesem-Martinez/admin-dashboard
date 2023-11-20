@@ -19,18 +19,18 @@ body{
     vertical-align: middle;
 }
 
-.big-image{
-    height: 100px;
-    width: 100px;
-}
-
 .img-div{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+}
+
+.big-image{
+    height: 70px;
+    width: 70px;
 }
 
 .profile-pic{
@@ -39,30 +39,30 @@ body{
 
 
 .container{
+    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: max-content 4fr;
+    grid-template-rows: min-content 3fr;
+    overflow: hidden;
 }
 
 /* ===== HEADER SECTION ===== */
 .header{
     grid-column: 2 / 3;
-
-    padding: 20px 40px;
     background-color: var(--white-background-color);
+    padding: 5px 40px;
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, min-content);
-    align-items: center;
     gap: 10px;
 }
 
 /* Search Bar */
 .search-bar{
     display: grid;
-    grid-template-columns: minmax(min-content, 5%) minmax(min-content, 70%);
+    grid-template-columns: min-content minmax(min-content, 70%);
     gap: 10px;
+    align-content: center;
 }
 
 .search-bar > *{
@@ -84,7 +84,7 @@ body{
 }
 
 .search-input{
-    height: 25px;
+    height: 35px;
 
     background-color: var(--gray-background-color);
     border-radius: 16px;
@@ -95,6 +95,7 @@ body{
 .profile-section{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-content: center;
     align-items: center;
     justify-items: end;
     gap: 10px;
@@ -118,26 +119,23 @@ body{
 }
 
 /* --- Bottom Header --- */
-
-.bottom-profile-text{
-    font-weight: 700;
-    margin-left: 5px;
-}
-
-.greeting{
+span{
     font-size: 1rem;
 }
 
 .user-name{
-    margin-top: 3px;
+    margin-top: 0;
     font-size: 2rem;
+    font-weight: 700;
+    margin-left: 5px;
 }
 
 .buttons{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px ,1fr));
-    grid-template-rows: repeat(1, minmax(50px, 1fr));
+    grid-template-rows: repeat(1, 50px);
     justify-content: end;
+    align-content: center;
 }
 .button{
     font-family: inherit;
@@ -170,16 +168,14 @@ body{
     justify-items: center;
 
     padding: 20px 40px;
+    padding-left: 20px;
     color: var(--white-background-color);
 }
 
 .logo > div{
-    width: 70px;
-    height: 70px;
     background-image: url(./images/icons/dashboard-icon.svg);
     border-radius: 0;
 }
-
 
 .sidebar-links-section{
     display: grid;
@@ -188,10 +184,14 @@ body{
     gap: 50px;
 }
 
+.link{
+    margin-bottom: 30px;
+}
+
 .link-text{
     text-decoration: none;
     color: var(--white-background-color);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -204,7 +204,7 @@ body{
     background-size: cover;
     background-position: center;
     line-height: 1rem;
-    margin-right: 5px;
+    margin-right: 40px;
 }
 
 .home > .link-icon{
@@ -215,6 +215,33 @@ body{
     background-image: url(./images/icons/profile-icon.svg);
 }
 
+.messages > .link-icon{
+    background-image: url(./images/icons/messages-icon.svg);
+}
+
+.history > .link-icon{
+    background-image: url(./images/icons/history-icon.svg);
+}
+
+.tasks > .link-icon{
+    background-image: url(./images/icons/tasks-icon.svg);
+}
+
+.communities > .link-icon{
+    background-image: url(./images/icons/communities-icon.svg);
+}
+
+.settings > .link-icon{
+    background-image: url(./images/icons/settings-icon.svg);
+}
+
+.support > .link-icon{
+    background-image: url(./images/icons/support-icon.svg);
+}
+
+.privacy > .link-icon{
+    background-image: url(./images/icons/privacy-icon.svg);
+}
 
 
 
