@@ -211,6 +211,10 @@ body{
     background-image: url(./images/icons/home-icon.svg);
 }
 
+.profile > .link-icon{
+    background-image: url(./images/icons/profile-icon.svg);
+}
+
 
 
 
