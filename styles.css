@@ -329,10 +329,34 @@ span{
 
 .announcements-entries{
     background-color: var(--white-background-color);
-    padding: 40px 40px;
+    padding: 40px 20px;
     border-radius: 8px;
 }
 
 hr{
     margin: 25px auto;
+}
+
+/* Trending */
+.trending-entries{
+    background-color: var(--white-background-color);
+    padding: 20px 20px;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.trending-img{
+    margin-right: 15px;
+}
+
+.trending-username{
+    color: gray;
+}
+
+.trending-handle{
+    color: black;
+    
 }
