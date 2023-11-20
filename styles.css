@@ -1,5 +1,6 @@
 :root{
-    --gray-background-color: #dbdbdb;
+    --gray-background-color: #e3e8f1;
+    --white-background-color: #fefffe;
 }
 
 html{
@@ -22,20 +23,19 @@ body{
     grid-column: 2 / 3;
 
     padding: 20px 40px;
-    background-color: #fefefe;
-}
+    background-color: var(--white-background-color);
 
-/* --- Top Header --- */
-.top-header{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, min-content);
     align-items: center;
+    gap: 10px;
 }
 
 /* Search Bar */
 .search-bar{
     display: grid;
-    grid-template-columns: minmax(min-content, 5%) minmax(min-content, 90%);
+    grid-template-columns: minmax(min-content, 5%) minmax(min-content, 70%);
     gap: 10px;
 }
 
@@ -71,27 +71,23 @@ body{
     grid-template-columns: 1fr 3fr;
     align-items: center;
     justify-items: end;
-}
-
-.profile-button > *{
-    display: inline-block;
+    gap: 10px;
 }
 
 .img-div{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
 
     background-image: url(./images/profile-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-
-    line-height: 1rem;
-    vertical-align: middle;
 }
 
 .profile-name{
-    
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .notifications{
@@ -105,13 +101,80 @@ body{
     border: none;
 }
 
+/* --- Bottom Header --- */
+.bottom-image{
+    height: 100px;
+    width: 100px;
+}
+
+.bottom-profile-text{
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.greeting{
+    font-size: 1rem;
+}
+
+.user-name{
+    margin-top: 3px;
+    font-size: 2rem;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px ,1fr));
+    grid-template-rows: repeat(1, minmax(50px, 1fr));
+    justify-content: end;
+}
+.button{
+    font-family: inherit;
+    font-size: 1.3rem;
+    color: var(--white-background-color);
+    font-weight: 500;
+
+    background-color: #1892d5;
+
+    padding: 5px 10px;
+    border: none;
+    border-radius: 25px;
+
+    margin-right: 5px;
+}
+.btn-share{
+    margin-right: 0;
+}
+
+
+
+
+
+
+/*===== SIDEBAR =====*/
 .sidebar{
-    background-color: #FCD412;
+    background-color: #1892d5;
     grid-column: 1 / 2;
     grid-row: 1 / span3;
 }
+
+
+
+
+
+
+
+
+
+
 
 .content{
     background-color: #99afff;
     grid-column: 2 / 3;
 }
+
+.vertical-center{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
