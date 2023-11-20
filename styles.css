@@ -256,7 +256,7 @@ span{
     display: grid;
     grid-template-columns: 3fr  1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    column-gap: 30px;
 }
 
 .projects{
@@ -266,6 +266,10 @@ span{
 .announcements,
 .trending{
     grid-column: 2 / 3;
+}
+
+.announcements{
+    grid-row: 1 / 2;
 }
 
 .projects-grid{
@@ -288,7 +292,8 @@ span{
 }
 
 .project-description,
-.project-title{
+.project-title,
+.announcements-entry > *{
     margin: 0;
 }
 
@@ -318,4 +323,16 @@ span{
 
 .fork{
     background-image: url(./images/icons/fork-icon.svg);
+}
+
+/* Announcements */
+
+.announcements-entries{
+    background-color: var(--white-background-color);
+    padding: 40px 40px;
+    border-radius: 8px;
+}
+
+hr{
+    margin: 25px auto;
 }
